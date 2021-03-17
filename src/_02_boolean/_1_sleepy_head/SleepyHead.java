@@ -12,10 +12,18 @@ public class SleepyHead {
 		/************************  SLEEPY HEAD  **************************/
 		boolean isWeekend;
 		// Write code to ask the user what day it is.
-        
+        String day=JOptionPane.showInputDialog("what day is it.");
 		// Set the boolean isWeekend based on the value they enter
-		
-		
+        if(day.equalsIgnoreCase("Saturday")||day.equalsIgnoreCase("sunday")) {
+        	isWeekend=true;
+        }else {
+        	isWeekend=false;
+        }
+		if(isWeekend==true) {
+			JOptionPane.showMessageDialog(null, "Go to sleep");
+		}else {
+			JOptionPane.showMessageDialog(null, "Get out of bed and go to school!");
+		}
 		// If it is the weekend, tell the user they get to sleep in.
 		
 		// If it is not the weekend, tell them to get out of bed and go to school!
@@ -25,11 +33,20 @@ public class SleepyHead {
 
 		boolean passedExam;
 		// Write code to ask the user what percentage they scored in their last exam
-
-		
+String score=JOptionPane.showInputDialog("What score did you got for the last test?");
+		int number=Integer.parseInt(score);
 		// If they scored more than 70, they passed the exam.
 		// Set the boolean passedExam based on their score.
-		
+		if(number>=70) {
+			passedExam=true;
+		}else {
+			passedExam=false;
+		}
+		if(passedExam==true) {
+			JOptionPane.showMessageDialog(null, "Good Job!");
+		}else {
+			JOptionPane.showMessageDialog(null, "better luck next time!");
+		}
 		// If the user passed the exam, congratulate them
 		
 		// otherwise, wish them better luck next time.
@@ -55,11 +72,11 @@ public class SleepyHead {
 		
 		boolean isRed;
 		// Ask the user what color to draw with. Based on their answer, set the isRed variable
-		
+		String color=JOptionPane.showInputDialog("what color do you want to draw");
 		
 		boolean isSquare;		
 		// Now ask the user what shape to draw. Based on their answer, set the isSquare variable
-		
+	String shape=JOptionPane.showInputDialog("what shape you")
 		
 		// Now you MUST use the && operator to join the booleans for this code. 
 		// Ask your teacher if you are not sure how

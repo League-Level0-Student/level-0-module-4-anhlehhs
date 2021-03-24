@@ -76,13 +76,25 @@ String score=JOptionPane.showInputDialog("What score did you got for the last te
 		
 		boolean isSquare;		
 		// Now ask the user what shape to draw. Based on their answer, set the isSquare variable
-	String shape=JOptionPane.showInputDialog("what shape you")
+	String shape=JOptionPane.showInputDialog("what shape you want to draw?");
 		
 		// Now you MUST use the && operator to join the booleans for this code. 
 		// Ask your teacher if you are not sure how
 		// Use an if statement to ONLY draw a red square when it has been requested (use the method below)
 		// otherwise, tell the user you don't know how to draw that shape
-		
+		if(shape.contentEquals("square")&&color.contentEquals("red")) {
+			Robot john= new Robot();
+			john.penDown();
+			john.setPenColor(355, 0, 0);
+			for (int i = 0; i < 3; i++) {
+				john.move(100);
+				john.turn(90);
+			}
+				
+			
+		}else {
+			JOptionPane.showMessageDialog(null, "I dont know how to draw that shape");
+		}
 
 	}
 
